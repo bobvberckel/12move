@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme color" content="#2AD190">
+    <meta name="author" content="Mike Yang & Bob van Berckel">
+    <title>12move | Login</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <img src="./assets/images/logo.png" alt="Logo van 12move">
+        </div>
+
+        <div class="right">
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+        </div>
+    </nav>
+
+    <br/>
+
+    <div class="container">
+        <div class="register">
+            <h2>Nog geen account?</h2>
+            <form action="#" method="POST">
+                <h3>Uw email:</h3>
+                <input type="email" required>
+                <div class="wachtwoorden">
+                    <div class="wachtwoord1">
+                        <h3>Wachtwoord:</h3>
+                        <input type="password" required id="password">
+                    </div>
+                    <div class="wachtwoord2">
+                        <h3>Wachtwoord: (herhaling)</h3>
+                        <input type="password" required>
+                    </div>
+                </div>
+                <h3>Uw naam:</h3>
+                <input type="text" required>
+                <div class="lengteEnGewicht">
+                    <div class="lengte">
+                        <h3>Uw lengte: (CM)</h3>
+                        <input type="number" min="75" max="250" required>
+                    </div>
+                    <div class="gewicht">
+                        <h3>Uw gewicht: (KG)</h3>
+                        <input type="number" min="30" max="250" required>
+                    </div>
+                </div>
+                <h3>Uw geboorte datum:</h3>
+                <input type="date" required>
+                <br/>
+                <input type="submit" value="Registreren">
+            </form>
+        </div>
+        
+        <div class="login">
+            <h2 id="LoginText1">Al een account?</h2>
+            <h2 id="LoginText2">Login</h2>
+            <form action="#" method="POST">
+                <h3>Uw email:</h3>
+                <input type="email" required>
+                <h3>Uw wachtwoord:</h3>
+                <input type="password" required>
+                <br/>
+                <input type="submit" value="Log in">
+            </form>
+            <a href="./register.html" id="linktoregister">Nog geen account?</a>
+        </div>
+    </div>
+
+</body>
+</html>
