@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container input {
+    border-color: rgba(112, 112, 112, 0.46);
+    color: rgba(112, 112, 112, 0.79);
+    border-width: 1px;
+}
+
+.container .register input[type="submit"], .container .login input[type="submit"] {
+    border: none;
+    background-color: transparent;
+    color: #122F3F;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 1440px) {
+    .container .login {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+    
+    nav .left {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container {
+        text-align: center;
+    }
+
+    nav .left img {
+        height: auto;
+        width: 8em;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    nav .right {
+        display: none;
+    }
+    
+    .container .login {
+        display: block;
+        text-align: center;
+    }
+
+    .container h2 {
+        margin-bottom: 1em;
+    }
+
+    .container .register input[type="submit"] {
+        font-size: 20px;
+    }
+
+    nav .right {
+        display: none;
+    }
+
+    .container .register input[type="submit"] {
+        width: 90px;
+        margin-top: 2em;
+        font-size: 15px;
+    }
+
+    .container .register input[type="number"] {
+        width: 100px;
+    }
+
+    .container .register input[type="date"] {
+        font-family: 'Montserrat', sans-serif;
+        width: 150px;
+    }
+}
