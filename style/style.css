@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: rgba(157, 157, 160, 0.8);
+}
+
+main {
+  background: #fff;
+}
+
+.asidegrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5em;
+}
+
+nav {
+  padding: 20px;
+  background: #6D808B;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  background: #ffffff;
+  min-height: 100px;
+  padding: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 10px;
+  background: #122f3f;
+  color: #f2f2f2;
+  text-decoration: none;
+  border-radius: 0em 1em 0em 1em;
+  margin-right: 0.8em;
+}
+
+nav ul li .active, nav ul li a:hover {
+  color: #122f3f;
+  background: #f2f2f2;
+  text-decoration: none;
+  border-radius: 1em 0em 1em 0em;
+}
+
+footer {
+  padding: 20px;
+  color: #f2f2f2;
+  background: #122f3f;
+}
+
+.AllVideos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-row-gap: 5em;
+  text-align: center;
+}
+
+.triplevideo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 2em;
+}
+
+.daily {
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+.star {
+  color: goldenrod;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
