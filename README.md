@@ -4,8 +4,11 @@ Project voor PROJ: COVID19.
 # Opdracht beschrijving
 We moeten voor het schoolvak BAP (Afgekort Backend Programming) een website maken die voor een specifieke doelgroep in de corona tijden heel handig zou zijn. Mike Yang en ik kozen specifiek voor een onderdeel: Fit blijven. Wij wilden een website maken waar je meerdere dingen op kon doen, waaronder sportvideo's bekijken.
 
-# Uitwerking 
-Mike Yang en ik hebben samengewerkt om deze website tot realiteit te brengen. Ik werkte voornamelijk aan de functies binnen de website en de hosting. Zo heb ik bijvoorbeeld de BMI Calculator die op de website te vinden is gemaakt. Dat ging als volgt:
+# Uitwerking - Inleiding
+Mike Yang en ik hebben samengewerkt om deze website tot realiteit te brengen. Ik werkte voornamelijk aan de functies binnen de website en de hosting. Mike richtte zich vooral op de backend functies en de styling van de website.
+
+# Uitwerking - BMI Berekenen
+Ik heb bij deze website gewerkt aan een BMI calculator, deze is als volgt uitgewerkt. 
 
 Om te beginnen heb je waardes nodig. Deze waardes maken deel uit van de BMI, hier gaat het namelijk om de hoogte en het gewicht. Om de hoogte en het gewicht uit het formulier te halen gebruik ik een simpel stukje javascript.
 ```js
@@ -75,3 +78,37 @@ function callback(response) {
     }
 }
 ```
+
+Dit is hoe het systeem werkt om je BMI te berekenen.
+
+# Uitwerking - COVID19 API
+Op de website hadden we nog een klein plekje, en we wilde graag een COVID19 API hebben met daarin infromatie over COVID19.
+
+Informatie uit de API halen we op door JS.
+
+```js
+  
+// Een nieuw XMLHttpRequest aanmaken.
+let request = new XMLHttpRequest;
+
+// XMLHttpRequest openen.
+request.open("GET", "https://api.covid19api.com/summary", true);
+
+// Instellen dat onze return in JSON gaat zijn.
+request.responseType = "json";
+
+// Gegevens van de API ophalen.
+request.onload = function() {
+    const data = request.response;
+    console.log(data);
+
+    // Setting our HTML Elements.
+    document.getElementById(`totalConfirmed`).innerHTML     =   data.Global.TotalConfirmed;
+    document.getElementById(`newRecovered`).innerHTML       =   data.Global.NewRecovered;
+    document.getElementById(`totalRecovered`).innerHTML     =   data.Global.TotalRecovered;
+}
+
+// Request versturen
+request.send();
+```
+
